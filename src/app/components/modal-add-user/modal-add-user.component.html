@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content>
+  <form [formGroup]="formUser">
+    <div class="display-flex flex-column">
+
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+
+      <div class="display-flex flex-column">
+        <label>Gender: </label>
+        <mat-radio-group class="radio-group" formControlName="gender">
+          <mat-radio-button value="male">Male</mat-radio-button>
+          <mat-radio-button value="famele">Famale</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="display-flex flex-column">
+        <label>Status: </label>
+        <mat-radio-group class="radio-group" formControlName="status">
+          <mat-radio-button value="inactive">inactive</mat-radio-button>
+          <mat-radio-button value="active">Active</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!-- The mat-dialog-close pass user to add -->
+  <button mat-button [mat-dialog-close]="formUser.value" [disabled]="formUser.invalid">Add</button>
+</mat-dialog-actions>

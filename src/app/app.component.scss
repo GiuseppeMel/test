@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+  min-height: 600px;
+  padding: 50px;
+  background-color: rgb(225, 225, 225);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
