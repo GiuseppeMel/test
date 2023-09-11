@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from './service/user/user.service';
+import { SpinnerService } from './service/spinner/spinner.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test';
 }
